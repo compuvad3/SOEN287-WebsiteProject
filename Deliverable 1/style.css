@@ -1,16 +1,20 @@
+/* Characteristics of the body of the html file. */
 body {
     margin: 0;
     padding: 0;
     background: url("loginBackground.jpg");
     background-size: 100%;
+    /* background-repeat is used to ensure that
+    the background does not repeat when the page is zoomed-in or zoomed-out. */
     background-repeat: no-repeat;
     font-family: sans-serif;
 }
 
-.loginBox{
+/* Characteristics of the login box of the Login webpage. */
+.loginBox {
     width: 380px;
     height: 620px;
-    background: #000;
+    background: black;
     color: white;
     top: 50%;
     left: 700px;
@@ -18,10 +22,12 @@ body {
     transform: translate(-50%, -50%);
     box-sizing: border-box;
     padding: 90px 40px;
+    /* Removes the sharpness of the login box borders. */
     border-radius: 10px;
 }
 
-.loginAvatar{
+/* Characteristics of the avatar of the login box. */
+.loginAvatar {
     width: 100px;
     height: 100px;
     position: absolute;
@@ -29,49 +35,30 @@ body {
     left: calc(50% - 50px);
 }
 
-h1{
+/* Characteristics of the heading h1. */
+h1 {
     margin: 25px 0;
     padding: 0;
     text-align: center;
     font-size: 32px;
 }
 
-.loginBox p{
+/* Characteristics of the paragraph of the login box. */
+.loginBox p {
     margin: 0;
     padding: 0;
     font-weight: bold;
     font-size: 18px;
 }
 
-.loginBox input{
+/* Characteristics of the input of the login box. */
+.loginBox input {
     width: 100%;
     margin-bottom: 30px;
 }
 
-.loginBox input[type="text"], input[type="password"]{
-    border: none;
-    border-bottom: 1px solid white;
-    background: transparent;
-    outline: none;
-    height: 40px;
-    color: white;
-    font-size: 16px;
-}
-
-.loginBox input[type="submit"]{
-    border: none;
-    background: rgb(74, 94, 131);
-    outline: none;
-    height: 40px;
-    color: white;
-    font-size: 17px;
-    border-radius: 10px;
-}
-.loginBox input[type="submit"]:hover{
-    cursor: pointer;
-    background: darkslategray;
-}
-.loginBox select{
+/* Characteristics of the dropdown menu of the login box. */
+.loginBox select {
     width: 100%;
     margin-top: 10px;
     margin-bottom: 30px;
@@ -81,5 +68,34 @@ h1{
     height: 30px;
     color: white;
     font-size: 17px;
+    /* Removes the sharpness of the dropdown menu borders. */
     border-radius: 10px;
+}
+
+/* Characteristics of the username and password fields of the login box. */
+.loginBox input[type="text"], input[type="password"] {
+    border: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: white;
+    font-size: 16px;
+}
+
+/* Characteristics of the submit field (Login button) of the login box. */
+.loginBox input[type="submit"] {
+    border: none;
+    background: rgb(74, 94, 131);
+    outline: none;
+    height: 40px;
+    color: white;
+    font-size: 17px;
+    border-radius: 10px;
+}
+
+/* When the cursor is over the submit field (Login button), it changes its color. */
+.loginBox input[type="submit"]:hover {
+    cursor: pointer;
+    background: darkslategray;
 }
