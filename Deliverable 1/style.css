@@ -99,3 +99,199 @@ h1 {
     cursor: pointer;
     background: darkslategray;
 }
+
+/*--------------------------------------------Deliverable 2-----------------------------------*/
+
+#profileBody {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    background: url("profileBackground.jpg") no-repeat 50% 20% / cover;
+}
+
+#ulMenuProfile {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Removes the underline of the profile menu elements. */
+.aOfProfile { text-decoration: none; }
+
+/* Adds the header to the profile page.
+   That is the semi-transparent section from the top to the profile content elements.
+ */
+.headerWrapper header {
+    width: 100%;
+    background: rgba(11, 11, 33, 0.5) no-repeat 50% 20% / cover;
+    min-height: calc(100px + 15vw);
+    box-shadow: 1px 3px 12px rgba(0, 0, 0, 0.3); /* Adds some shadow. */
+}
+
+/* Defines the characteristics of the left column - the general info of the user. */
+.headerWrapper .columnsContainer .leftColumn {
+    padding: 25px 20px;
+    text-align: center;
+    max-width: 350px;
+    position: relative;
+    margin: 0 auto;
+}
+
+/* Defines the position of the profile's avatar. */
+.headerWrapper .columnsContainer .leftColumn .profileAvatar {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+/* Defines the all the properties of the profile's avatar image itself. */
+.headerWrapper .columnsContainer .leftColumn .profileAvatar img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    box-shadow: 1px 3px 12px rgba(0, 0, 0, 0.18); /* Adds some shadow. */
+    /* Adds a circular border to the avatar image. */
+    background: azure;
+    padding: 5px;
+}
+
+.headerWrapper .columnsContainer .leftColumn h1 {
+    color: azure;
+    margin-top: 60px;
+    font-weight: 600;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.headerWrapper .columnsContainer .leftColumn p {
+    font-size: 1.2rem;
+    color: azure;
+    margin: 0;
+}
+
+.headerWrapper .columnsContainer .rightColumn nav {
+    display: flex;
+    align-items: center;
+    padding: 30px 0;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.headerWrapper .columnsContainer .rightColumn nav ul {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+.headerWrapper .columnsContainer .rightColumn nav ul li a {
+    text-transform: uppercase;
+    color: azure;
+    display: block;
+
+    /*REMOVE LATER !!!!!!!!!!!!!!!!!
+    outline: 1px solid red;*/
+
+    padding: 10px;
+}
+
+.headerWrapper .columnsContainer .rightColumn nav ul li a:hover {
+    background-color: rgba(11, 11, 33, 0.5);
+    border-radius: 10px;
+}
+
+/* This part is responsible for this page to properly be displayed in desktop view. */
+@media (min-width: 868px) {
+    .headerWrapper .columnsContainer {
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 90%;
+        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 50px;
+    }
+    .headerWrapper .columnsContainer .leftColumn {
+        padding: 25px 0px;
+    }
+    .headerWrapper .columnsContainer .rightColumn nav ul {
+        flex-direction: row;
+        gap: 30px;
+    }
+}
+
+#scheduleBody {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    background: url("scheduleBackground.jpg") no-repeat 50% 20% / cover;
+    margin-left: 30px;
+}
+
+#scheduleBody header {
+    font-size: xxx-large;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#scheduleBody #fallSchedule table, #scheduleBody #fallSchedule th, #scheduleBody #fallSchedule td {
+    border-collapse: collapse;
+    border:2px solid rgb(16, 25, 49);
+    width: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#scheduleBody #winterSchedule table, #scheduleBody #winterSchedule th, #scheduleBody #winterSchedule td {
+    border-collapse: collapse;
+    border:2px solid rgb(106, 130, 187);
+    width: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#scheduleBody #fallSchedule th { background-color: rgba(106, 130, 187, 1); }
+
+#scheduleBody #winterSchedule th { background-color: rgba(16, 25, 49, 1); }
+
+#scheduleBody ul {
+    list-style-type: none;
+    margin-left: -35px;
+    align-items: center;
+}
+
+#scheduleBody h3 { margin-top: 50px; }
+
+#scheduleBody h4 { margin-bottom: -5px; }
+
+#fallSchedule { color: rgb(16, 25, 49); }
+
+#winterSchedule { color: rgb(106, 130, 187); }
+
+@media (min-width: 868px) {
+    #scheduleBody header { text-align: center; }
+
+    #scheduleContainers {
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 90%;
+        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 50px;
+    }
+
+    #scheduleBody #winterSchedule table, #scheduleBody #winterSchedule th, #scheduleBody #winterSchedule td { border:2px solid rgb(16, 25, 49); }
+
+    #scheduleBody #winterSchedule th { background-color: rgba(106, 130, 187, 1); }
+
+    #winterSchedule { color: rgb(16, 25, 49); }
+}
